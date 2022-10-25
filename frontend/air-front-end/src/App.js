@@ -1,48 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
 import './App.css';
-import {useState} from "react";
-import {Button, Modal} from "react-bootstrap";
+import RecommendationPage from "./pages/recommendation.page";
+import MapPage from "./pages/map.page";
+import MetricsPage from "./pages/metrics.page";
+import TopNavigation from "./components/navigation/top-navigation.component";
+import SideNavigation from "./components/navigation/side-navigation.component";
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button variant="primary" onClick={handleShow}>
-          Launch test modal
-        </Button>
-
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </header>
-    </div>
+      <div className={"d-flex vh-100 vw-100 flex-column"}>
+          <div className={"top-nav"}>
+              <TopNavigation/>
+          </div>
+          <div className={"d-flex h-100"} style={{paddingTop: "45px"}}>
+              <div className={"side-nav"}>
+                  <SideNavigation/>
+              </div>
+              <div className={"overflow-auto w-100"}>
+                  <Routes>
+                      <Route path="/" element={<MapPage/>}/>
+                      <Route path="/map" element={<MapPage/>} />
+                      <Route path="/metrics" element={<MetricsPage/>} />
+                      <Route path="/recommend" element={<RecommendationPage/>} />
+                  </Routes>
+              </div>
+          </div>
+      </div>
   );
 }
 
