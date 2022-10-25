@@ -13,11 +13,11 @@ function App() {
           <div className={"top-nav"}>
               <TopNavigation/>
           </div>
-          <div className={"d-flex h-100"} style={{paddingTop: "40px"}}>
+          <div className={"d-flex h-100"} style={{paddingTop: "45px"}}>
               <div className={"side-nav"}>
                   <SideNavigation/>
               </div>
-              <div className={"overflow-scroll w-100"}>
+              <div className={"overflow-auto w-100"}>
                   <Routes>
                       <Route path="/" element={<MapPage/>}/>
                       <Route path="/map" element={<MapPage/>} />
