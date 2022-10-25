@@ -1,0 +1,8 @@
+.compound-item{
+    min-height: 130px;
+    width: 300px;
+}
+
+.compound-item p {
+    margin: 0;
+}

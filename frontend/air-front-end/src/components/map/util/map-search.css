@@ -1,0 +1,11 @@
+.map-search-container{
+    background-color: #264653;
+    border-radius: 8px;
+    width: 75%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
