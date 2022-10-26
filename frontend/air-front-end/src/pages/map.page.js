@@ -30,11 +30,17 @@ export default function MapPage() {
         }
     ];
 
+    const config = {
+        coordinate: [51.44060077234845, 5.477458715209605],
+        zoom: 12,
+        scroll: true,
+    }
+
     return (
         <div className="map-layout">
             <MapSlider/>
             <MapButtons/>
-            <Map/>
+            <Map config={config}/>
             <MapFilterList/>
             <MapCompoundList compounds={staticDataCompound}/>
         </div>
