@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import MapSearch from "./util/map-search.component";
+import MapControl from "./util/control/map-control.component"
 import "./map.css";
-import {MapContainer, GeoJSON, TileLayer, Marker} from 'react-leaflet'
+import { MapContainer, GeoJSON, TileLayer, Marker, ScaleControl } from 'react-leaflet'
 import boundaries from '../../resources/data/eindhoven-area-boundaries.json'
 
 
 function Map({config}) {
     const geoJsonRef = useRef();
     const mapRef = useRef();
+    // const [origin, setOrigin] = useState()
 
     function getColor (aqi) {
         return aqi > 1000 ? '#800026' :
@@ -70,9 +72,11 @@ function Map({config}) {
                     onEachFeature={onEachFeature}
                     ref={geoJsonRef}
                 />
+                <ScaleControl/>
             </MapContainer>
             <div className="d-flex justify-content-center align-items-center w-100 h-auto gap-1">
                 <div style={{background: "gray", width: "25%", height: "100%"}}/>
+                <MapControl coordinate={config.coordinate} zoom={config.zoom} map={mapRef}/>
                 <MapSearch/>
             </div>
         </div>

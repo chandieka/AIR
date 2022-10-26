@@ -1,0 +1,25 @@
+.control-container {
+    background-color: #264653;
+    color: white;
+    height: 100%;
+    border-radius: 8px;
+    min-width: 200px
+}
+
+.control {
+    background-color: #3C2955;
+    height: 40px;
+    width: 40px;
+    margin-left: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.control:hover {
+    background-color: white;
+    color: #9116F9;
+}
