@@ -1,0 +1,33 @@
+#barChart{
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 30vh ;
+    width: 60vh;
+    border-radius: 20px;
+}
+
+#lineChart{
+
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 30vh ;
+    width: 60vh;
+    border-radius: 20px;
+}
+#doughnutChart{
+
+    background-color: white;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 60vh ;
+    width: 60vh;
+    border-radius: 20px;
+}
+#scatterChart{
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    height: 30vh ;
+    width: 60vh;
+    border-radius: 20px;
+}
