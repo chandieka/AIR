@@ -6,11 +6,11 @@ services:
     image: nginx:latest
     container_name: air_nginx
     ports:
-      # - "80:80"
-      - "443:443"
+      - "80:80"
+      # - "443:443"
     restart: always
-    volumes: 
-      - ".:/etc/nginx/conf.d/"
+    # volumes: 
+      # - ".:/etc/nginx/conf.d/"
 
   #MySQL Database Docker Container
   database:
