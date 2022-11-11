@@ -7,8 +7,6 @@ r
 Bfrontend/air-front-end/src/components/map/util/time/map-slider.css,b\e\be51cf9d4069bbe2b96bff1fe91fce59809f7573
 {
 Kfrontend/air-front-end/src/components/map/util/time/map-slider.component.js,c\7\c7930ea63499715e9ad4b990b023358477fb1dc8
-a
-1frontend/air-front-end/src/components/map/map.css,9\a\9a0a216c05c6738f83a416ff1bfb6e9b0b89522a
 m
 =frontend/air-front-end/src/components/map/util/map-search.css,c\b\cb112f9eb9a9d572e80cbf8d3db0d44a20ab1310
 9
@@ -39,3 +37,17 @@ R
 "frontend/air-front-end/src/App.css,c\a\ca945fbfff9178501d6cd35550401d8ae81c8c46
 Q
 !frontend/air-front-end/src/App.js,0\e\0ef6a714b531001b202cbc8581fa2d802dd5b0c6
+V
+&frontend/air-front-end/src/App.test.js,0\4\04af61570ad557c9d76a8c7f05aad33aabf60142
+j
+:frontend/air-front-end/src/components/map/map.component.js,d\5\d5675a4649d7bddad3013b0659c116db5670afaa
+|
+Lfrontend/air-front-end/src/components/navigation/top-navigation.component.js,4\2\4206c2de96f6698e0a7b27f0d62883c6ad526828
+}
+Mfrontend/air-front-end/src/components/navigation/side-navigation.component.js,4\4\440bbac9b011f309e8b45d73652f6be8764082dc
+S
+#frontend/air-front-end/src/index.js,b\2\b253e021c4612ba21b624688b34014cf685b09ea
+`
+0frontend/air-front-end/src/pages/metric.page.css,c\2\c2630676365c88b8724b984df26499d7c0ec18b6
+]
+-frontend/air-front-end/src/pages/map.page.css,d\9\d9c08fbd6877f40ff13e59d68d4e333d9620891e
