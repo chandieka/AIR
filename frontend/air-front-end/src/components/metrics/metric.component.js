@@ -1,25 +1,18 @@
-import BarChart from "./utils/Charts/barChart";
-import LineChart from "./utils/Charts/lineChart";
+import BarChart from "./utils/Charts/barChart.component";
+import LineChartComponent from "./utils/Charts/lineChart.component";
 import "./metric.component.css";
 import React from 'react';
-import DoughnutChart from "./utils/Charts/doughnutChart";
-import ScatterChart from "./utils/Charts/scatterChart";
+import DoughnutCharComponent from "./utils/Charts/doughnutChar.component";
+import ScatterChartComponent from "./utils/Charts/scatterChart.component";
 
-
-
-
-function metricComponent(){
+function MetricComponent(){
     return (
         <div className="chart-statistics-grid ">
-
+            <DoughnutCharComponent/>
             <BarChart/>
-            <LineChart/>
-            <DoughnutChart/>
-            <ScatterChart/>
+            <LineChartComponent/>
+            <ScatterChartComponent/>
         </div>
-
-
-
     );
 }
-export default metricComponent
+export default MetricComponent

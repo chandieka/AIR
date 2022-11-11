@@ -11,11 +11,9 @@ ChartJs.register(
     LinearScale,
     CategoryScale
 )
-const chartRefference = document.getElementById('LineChart')
 
-const ScatterChart = () => {
+const ScatterChartComponent = () => {
     const labels = ['first','second','third','fourth','fifth','sixth','seventh']
-
     var options = {
         options: {
             showTooltips: true,
@@ -26,21 +24,6 @@ const ScatterChart = () => {
             }
         }
     }
-    /*  const data = {
-          labels: labels,
-          datasets: [{
-              data: [0, 0],
-          }, {
-              data: [0, 1]
-          }, {
-              data: [1, 0],
-              showLine: true // overrides the `line` dataset default
-          }, {
-              type: 'scatter', // 'line' dataset default does not affect this dataset since it's a 'scatter'
-              data: [1, 1]
-          }]
-      }*/
-
     var data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
@@ -77,13 +60,10 @@ const ScatterChart = () => {
             borderWidth: 1
         }]
     }
-
     return (
-        <div id={'scatterChart'} >
+        <div className={'scatterChart'} >
             <Scatter aria-label={labels} data={data} options={options} />
         </div>
     )
 }
-
-export default ScatterChart
-/* eslint-enable */
+export default ScatterChartComponent
