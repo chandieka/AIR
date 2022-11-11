@@ -1,57 +1,32 @@
 /* eslint-disable */
 import React from 'react'
-import {
-    Chart as ChartJs,
-    PointElement,
-    LinearScale,
-    CategoryScale,
-    ArcElement,
-    Legend
-} from 'chart.js';
-import {Doughnut} from 'react-chartjs-2'
+import {Chart as ChartJs, LineElement, PointElement, Tooltip, LinearScale, CategoryScale, Legend} from 'chart.js';
+import {Line} from 'react-chartjs-2';
 import "./chartStyle.css"
 
-
 ChartJs.register(
-
-    ArcElement,
+    [Tooltip],
     PointElement,
-    Legend,
+    LineElement,
     LinearScale,
-    CategoryScale
+    CategoryScale,
+    Legend
 )
-const chartRefference = document.getElementById('LineChart')
 
-const DoughnutChart = () => {
+const LineChartComponent = () => {
     const labels = ['first','second','third','fourth','fifth','sixth','seventh']
-
-  /*  const data = {
-        labels: labels,
-        datasets: [{
-            data: [0, 0],
-        }, {
-            data: [0, 1]
-        }, {
-            data: [1, 0],
-            showLine: true // overrides the `line` dataset default
-        }, {
-            type: 'scatter', // 'line' dataset default does not affect this dataset since it's a 'scatter'
-            data: [1, 1]
-        }]
-    }*/
     var options = {
         options: {
-            responsive: false,
+            showTooltips: true,
+            responsive: true,
             aspectRatio: 2,
-        tooltip: {
-                enabled: false
-        }
+            tooltip: {
+                enabled: true
+            }
         }
     }
-
     var data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
@@ -74,14 +49,10 @@ const DoughnutChart = () => {
             borderWidth: 1
         }]
     }
-
     return (
-        <div id={'doughnutChart'} style={{ backgroundColor:'white',borderRadius:'20px'}}>
-
-            <Doughnut aria-label={labels} data={data} options={options}/>
+        <div className={'lineChart'} >
+            <Line aria-label={labels} data={data} options={options} />
         </div>
     )
 }
-
-export default DoughnutChart
-/* eslint-enable */
+export default LineChartComponent

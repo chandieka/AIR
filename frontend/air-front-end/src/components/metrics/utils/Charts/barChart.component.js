@@ -1,36 +1,20 @@
 /* eslint-disable */
 import React from 'react'
-import {Chart as ChartJs, LineElement, PointElement, Tooltip, LinearScale, CategoryScale, Legend} from 'chart.js';
-import {Line} from 'react-chartjs-2';
+import {Chart as ChartJs, BarElement, LinearScale, CategoryScale, Legend} from 'chart.js';
+import {Bar} from 'react-chartjs-2';
 import "./chartStyle.css"
 
 ChartJs.register(
-    [Tooltip],
-    PointElement,
-    LineElement,
+    BarElement,
     LinearScale,
     CategoryScale,
     Legend
 )
-const chartRefference = document.getElementById('LineChart')
 
-const LineChart = () => {
-    const labels = ['first','second','third','fourth','fifth','sixth','seventh']
-
-    var options = {
-        options: {
-            showTooltips: true,
-            responsive: true,
-            aspectRatio: 2,
-            tooltip: {
-                enabled: true
-            }
-        }
-    }
-
-    var data = {
+const BarChartComponent = () => {
+   var data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
+            datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
@@ -52,13 +36,19 @@ const LineChart = () => {
             borderWidth: 1
         }]
     }
-
+    var options = {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
     return (
-        <div id={'lineChart'} >
-            <Line aria-label={labels} data={data} options={options} />
+        <div className={'barChartComponent'} style={{}}>
+            <Bar data={data} options={options}  />
         </div>
     )
 }
 
-export default LineChart
+export default BarChartComponent
 /* eslint-enable */

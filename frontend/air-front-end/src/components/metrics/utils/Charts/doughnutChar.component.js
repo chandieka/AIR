@@ -1,22 +1,38 @@
 /* eslint-disable */
 import React from 'react'
-import {Chart as ChartJs, BarElement, LinearScale, CategoryScale, Legend} from 'chart.js';
-import {Bar} from 'react-chartjs-2';
-import "./chartStyle.css"
-
-
-ChartJs.register(
-    BarElement,
+import {
+    Chart as ChartJs,
+    PointElement,
     LinearScale,
     CategoryScale,
+    ArcElement,
     Legend
-)
-// const chartRefference = document.getElementById('barChart')
+} from 'chart.js';
+import {Doughnut} from 'react-chartjs-2'
+import "./chartStyle.css"
 
-const barChart = () => {
-   var data = {
+ChartJs.register(
+    ArcElement,
+    PointElement,
+    Legend,
+    LinearScale,
+    CategoryScale
+)
+
+const DoughnutCharComponent = () => {
+    const labels = ['first','second','third','fourth','fifth','sixth','seventh']
+    var options = {
+        options: {
+            responsive: false,
+            aspectRatio: 2,
+        tooltip: {
+                enabled: false
+        }
+        }
+    }
+    var data = {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
+        datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
@@ -38,24 +54,10 @@ const barChart = () => {
             borderWidth: 1
         }]
     }
-
-    var options = {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-
     return (
-       /* <div id={'barChart'} style={{ backgroundColor:'white', height:'30vh',width:'60vh',borderRadius:'20px'}}>
-            <Bar data={data} options={options}  />
-        </div>*/
-        <div id={'barChart'} style={{}}>
-            <Bar data={data} options={options}  />
+        <div className={'doughnutChart'} style={{ backgroundColor:'white',borderRadius:'20px'}}>
+            <Doughnut aria-label={labels} data={data} options={options}/>
         </div>
     )
 }
-
-export default barChart
-/* eslint-enable */
+export default DoughnutCharComponent
