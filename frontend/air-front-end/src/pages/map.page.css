@@ -1,0 +1,36 @@
+.map-layout{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-rows: 10vh 1fr minmax(15vh, auto);
+    grid-template-areas:
+            "timeSlider timeBtns"
+            "map mapFilters"
+            "compoundsList compoundsList"
+    ;
+    padding: 8px;
+    gap: 8px;
+}
+
+.time-slider{
+    grid-area: timeSlider;
+}
+
+.time-btns{
+    grid-area: timeBtns;
+}
+
+.map{
+    grid-area: map;
+}
+
+.map-filters{
+    grid-area: mapFilters;
+}
+
+.compounds-list{
+    grid-area: compoundsList;
+}
+
+

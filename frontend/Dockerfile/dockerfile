@@ -1,0 +1,18 @@
+FROM ubuntu:20.04
+
+RUN apt update
+RUN apt upgrade -y
+RUN apt install curl -y
+RUN apt-get install sudo
+RUN curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+RUN sudo apt install nodejs
+RUN sudo apt install build-essential -y
+ENV TZ=Europe/Amsterdam
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt install nginx -y
+
+EXPOSE 80/tcp
+
+STOPSIGNAL SIGTERM
+
+CMD ["nginx","-g","daemon off;"]
