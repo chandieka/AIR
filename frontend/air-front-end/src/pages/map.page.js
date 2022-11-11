@@ -35,7 +35,6 @@ export default function MapPage() {
         zoom: 12,
         scroll: true,
     }
-
     return (
         <div className="map-layout">
             <MapSlider/>

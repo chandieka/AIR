@@ -1,6 +1,10 @@
+/* eslint-disable */
 import React from 'react';
+import "./metric.page.css";
+import MetricComponent from "../components/metrics/metric.component";
+
 export default function MetricsPage() {
     return (
-        <h1>Metrics</h1>
+        <MetricComponent></MetricComponent>
     );
 }
