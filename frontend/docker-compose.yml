@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  webserver:
+    # image: nginx:latest
+    ports:
+      - 80:80
+    container_name: air_nginx
+    build: .
+    restart: always   
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/my_secret
+    secrets: 
+      - my_secret
+
+secrets:
+  my_secret:
+    file: ./my_secret.txt
