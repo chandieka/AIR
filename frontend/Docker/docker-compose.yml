@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  
+ #Nginx Webserver Docker Container
+  webserver:
+    image: nginx:latest
+    container_name: air_nginx
+    ports:
+      - "80:80"
+      # - "443:443"
+    restart: always
+    # volumes: 
+      # - ".:/etc/nginx/conf.d/"
+
+  #MySQL Database Docker Container
+  database:
+    image: mysql:latest
+    container_name: air_db
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+    secrets:
+      - db_root_password
+
+#Secret file for password
+secrets:
+  db_root_password:
+    file: ./db_root_password.txt
