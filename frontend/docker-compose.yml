@@ -1,16 +1,16 @@
 version: '3.8'
 services:
   webserver:
+    build: .
     image: nginx:latest
     ports:
-      - 80:80
+      - 8080:80
     container_name: air_frontend
-    build: .
     restart: always   
   mysql:
     image: mysql:latest
     ports:
-      - 3306:3306
+      - 3366:3306
     container_name: air_database
     environment:
       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/my_secret
