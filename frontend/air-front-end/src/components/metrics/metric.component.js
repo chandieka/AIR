@@ -14,6 +14,7 @@ function MetricComponent(){
             <BarChart/>
             <LineChartComponent/>
             <ScatterChartComponent/>
+            <ScatterChartComponent/>
         </div>
     );
 }
