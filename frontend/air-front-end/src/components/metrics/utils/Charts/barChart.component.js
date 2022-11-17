@@ -2,7 +2,7 @@
 import React from 'react'
 import {Chart as ChartJs, BarElement, LinearScale, CategoryScale, Legend} from 'chart.js';
 import {Bar} from 'react-chartjs-2';
-import "./chartStyle.css"
+import "./chart.css"
 
 ChartJs.register(
     BarElement,
@@ -15,25 +15,25 @@ const BarChartComponent = () => {
    var data = {
         labels: ['Jan', 'Feb', 'Mar', 'May', 'Jun' ],
        datasets: [
-       //     {
-       //     label: "NO2",
-       //     type: "line",
-       //     borderColor: "rgba(92,231,82,0.69)",
-       //     data: [408,547,675,734,1468],
-       //     fill: false
-       // }, {
-       //     label: "PM10",
-       //     type: "line",
-       //     borderColor: "rgb(255,135,71)",
-       //     data: [133,221,783,2478,3000],
-       //     fill: false
-       // },{
-       //     label: "SO2",
-       //     type: "line",
-       //     borderColor: 'rgba(153, 102, 255, 0.8)',
-       //     data: [233,621,1483,2078,3100],
-       //     fill: false
-       // },
+           {
+           label: "NO2",
+           type: "line",
+           borderColor: "rgba(92,231,82,0.69)",
+           data: [408,547,675,734,1468],
+           fill: false
+       }, {
+           label: "PM10",
+           type: "line",
+           borderColor: "rgb(255,135,71)",
+           data: [133,221,783,2478,3000],
+           fill: false
+       },{
+           label: "SO2",
+           type: "line",
+           borderColor: 'rgba(153, 102, 255, 0.8)',
+           data: [233,621,1483,2078,3100],
+           fill: false
+       },
            {
            label: "NO2",
            type: "bar",
@@ -63,7 +63,7 @@ const BarChartComponent = () => {
         }
     }
     return (
-        <div className={'barChartComponent'} style={{}}>
+        <div className={'chart barChartComponent'} style={{}}>
             <Bar data={data} options={options}  />
         </div>
     )

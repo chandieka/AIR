@@ -11,7 +11,7 @@ import {
 from 'chart.js';
 import {Line} from 'react-chartjs-2'
 import React from 'react'
-import "./chartStyle.css"
+import "./chart.css"
 
 
 ChartJs.register(
@@ -81,85 +81,8 @@ const MixedChartComponent = () => {
         ]
     };
 
-   /* const data = {
-        labels: 'Label',
-            datasets: [{
-                label: "Europe",
-                type: "line",
-                borderColor: "#8e5ea2",
-                data: [408,547,675,734],
-                fill: false
-            }, {
-                label: "Africa",
-                type: "line",
-                borderColor: "#3e95cd",
-                data: [133,221,783,2478],
-                fill: false
-            }, {
-                label: "Europe",
-                type: "bar",
-                backgroundColor: "rgba(0,0,0,0.2)",
-                data: [408,547,675,734],
-            }, {
-                label: "Africa",
-                type: "bar",
-                backgroundColor: "rgba(0,0,0,0.2)",
-                backgroundColorHover: "#3e95cd",
-                data: [133,221,783,2478]
-            }
-            ]
-        };*/
-
-
-// /*             actions = [
-//         {
-//             name: 'Randomize',
-//             handler(chart) {
-//                 chart.data.datasets.forEach(dataset => {
-//                     dataset.data = Utils.numbers({count: chart.data.labels.length, min: -100, max: 100});
-//                 });
-//                 chart.update();
-//             }
-//         },
-//     ];*/
-
-// /*    const config = {
-//         type: 'line',
-//         data: data,
-//         options: {
-//             responsive: true,
-//             interaction: {
-//                 mode: 'index',
-//                 intersect: false,
-//             },
-//             stacked: false,
-//             plugins: {
-//                 title: {
-//                     display: true,
-//                     text: 'Chart.js Line Chart - Multi Axis'
-//                 }
-//             },
-//             scales: {
-//                 y: {
-//                     type: 'linear',
-//                     display: true,
-//                     position: 'left',
-//                 },
-//                 y1: {
-//                     type: 'linear',
-//                     display: true,
-//                     position: 'right',
-//
-//                     // grid line settings
-//                     grid: {
-//                         drawOnChartArea: false, // only want the grid lines for one axis to show up
-//                     },
-//                 },
-//             }
-//         },
-//     };*/
     return(
-        <div className={'mixedChart'}>
+        <div className={'chart mixedChart'}>
             <Line data={data}></Line>
         </div>
     )
