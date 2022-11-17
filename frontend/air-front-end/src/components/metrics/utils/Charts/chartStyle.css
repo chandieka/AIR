@@ -1,74 +1,28 @@
 .barChartComponent{
     background-color: white;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    height: 40vh ;
-    width: 60vh;
     border-radius: 8px;
-    grid-area: barChart;
-    margin: 20px;
 }
-.lineChart{
+
+.lineChart {
     background-color: white;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    height: 40vh ;
-    width: 60vh;
     border-radius: 8px;
-    grid-area: lineChart;
-    margin: 20px;
+}
+
+.doughnutChart{
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
 }
 .mixedChart{
     background-color: white;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    height: 40vh ;
-    width: 60vh;
     border-radius: 8px;
-    grid-area: mixedChart;
-    margin: 20px;
 }
-.doughnutChart{
-    background-color: white;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    height: 60vh ;
-    width: 60vh;
-    border-radius: 8px;
-    grid-area: doughnutChart;
-    margin: 20px;
-}
+
 .scatterChart{
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     background-color: white;
-    height: 40vh ;
-    width: 60vh;
     border-radius: 8px;
-    grid-area: scatterChart;
-    margin: 20px;
-}
-
-@media only screen and (max-width: 700px) {
-    .barChartComponent{
-        height: 30vh ;
-        width: 50vh;
-        margin: 10px;
-    }
-    .lineChart{
-        height: 30vh ;
-        width: 50vh;
-        margin: 10px;
-    }
-    .doughnutChart{
-        height: 50vh ;
-        width: 50vh;
-        margin: 10px;
-
-    }
-    .scatterChart{
-        height: 30vh ;
-        width: 50vh;
-        margin: 10px;
-    }
-    .mixedChart{
-        height: 30vh ;
-        width: 50vh;
-        margin: 10px;
-    }
 }

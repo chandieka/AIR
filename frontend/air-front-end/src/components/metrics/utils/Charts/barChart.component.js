@@ -13,7 +13,7 @@ ChartJs.register(
 
 const BarChartComponent = () => {
    var data = {
-        labels: ['Jan', 'Feb', 'Mar', 'May', 'Jun'],
+        labels: ['Jan', 'Feb', 'Mar', 'May', 'Jun' ],
        datasets: [
        //     {
        //     label: "NO2",
