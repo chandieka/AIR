@@ -25,22 +25,45 @@ const ScatterChartComponent = () => {
         }
     }
     var data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data:  [{
-                x: -10,
-                y: 0
+        // labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+
+            datasets: [{
+                data: [
+                    {x: 17, y: 3},
+                ],
+                label: "NO2",
+                borderColor: "#3e95cd",
+                backgroundColor: "rgb(62,149,205,0.1)",
+                borderWidth:2,
+
             }, {
-                x: 4,
-                y: 10
+                data: [
+                    {x: 10, y: 3},
+                ],
+                label: "PM10",
+                borderColor: "#3cba9f",
+                backgroundColor: "rgb(60,186,159,0.1)",
+                borderWidth:2,
+
             }, {
-                x: 10,
-                y: 5
+                data: [
+                    {x: 4, y: 4},
+                ],
+                label: "O3",
+                borderColor: "#ffa500",
+                backgroundColor:"rgb(255,165,0,0.1)",
+                borderWidth:2,
+
             }, {
-                x: 1,
-                y: 5.5
-            }],
+                data: [
+                    {x: 14, y: 0}
+                ],
+                label: "SO2",
+                borderColor: "#c45850",
+                backgroundColor:"rgb(196,88,80,0.1)",
+                borderWidth:2,
+            }
+            ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -58,8 +81,8 @@ const ScatterChartComponent = () => {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        }]
-    }
+        }
+
     return (
         <div className={'scatterChart'} >
             <Scatter aria-label={labels} data={data} options={options} />
