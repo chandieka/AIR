@@ -8,13 +8,33 @@ import MixedChartComponent from "./utils/Charts/mixedChart.component";
 
 function MetricComponent(){
     return (
-        <div className="chart-statistics-grid ">
-            <MixedChartComponent/>
-            <DoughnutCharComponent/>
-            <BarChart/>
-            <LineChartComponent/>
-            <ScatterChartComponent/>
-            <ScatterChartComponent/>
+        <div className="p-2">
+            <div className="metric-options mb-2">
+
+            </div>
+            <div className="metric-container">
+                <div className="metric">
+                    <MixedChartComponent/>
+                </div>
+                <div className="metric">
+                    <BarChart/>
+                </div>
+                <div className="metric">
+                    <LineChartComponent/>
+                </div>
+                <div className="metric">
+                    <LineChartComponent/>
+                </div>
+                <div className="metric">
+                    <LineChartComponent/>
+                </div>
+                <div className="metric">
+                    <ScatterChartComponent/>
+                </div>
+                <div className="metric">
+                    <DoughnutCharComponent/>
+                </div>
+            </div>
         </div>
     );
 }

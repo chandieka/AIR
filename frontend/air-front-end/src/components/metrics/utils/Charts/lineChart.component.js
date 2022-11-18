@@ -2,7 +2,7 @@
 import React from 'react'
 import {Chart as ChartJs, LineElement, PointElement, Tooltip, LinearScale, CategoryScale, Legend} from 'chart.js';
 import {Line} from 'react-chartjs-2';
-import "./chartStyle.css"
+import "./chart.css"
 
 ChartJs.register(
     [Tooltip],
@@ -74,7 +74,7 @@ const LineChartComponent = () => {
         ]
     };
     return (
-        <div className={'lineChart'} >
+        <div className={'chart lineChart'} >
             <Line aria-label={labels} data={data} options={options} />
         </div>
     )

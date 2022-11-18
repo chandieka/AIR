@@ -2,7 +2,7 @@
 import React from 'react'
 import {Chart as ChartJs, LineElement, PointElement, LinearScale, CategoryScale, Legend} from 'chart.js';
 import {Scatter} from 'react-chartjs-2';
-import "./chartStyle.css"
+import "./chart.css"
 
 ChartJs.register(
     PointElement,
@@ -84,7 +84,7 @@ const ScatterChartComponent = () => {
         }
 
     return (
-        <div className={'scatterChart'} >
+        <div className={'chart scatterChart'} >
             <Scatter aria-label={labels} data={data} options={options} />
         </div>
     )

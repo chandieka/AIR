@@ -1,17 +1,12 @@
-.chart-statistics-grid{
+.metric-container {
     width: 100%;
-    height: 100%;
-    padding: 10px;
     display: grid;
     gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr;
-    /*grid-template-columns: fit-content(100px) fit-content(100px) 1fr;*/
-    background: #ffffff87;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.chart-statistics-grid * {
-    /*height: 200px;*/
-    width: 400px;
+.metric-options {
+    min-height: 50px;
+    background-color: rgb(38, 70, 83);;
+    border-radius: 8px;
 }
