@@ -23,10 +23,11 @@ const DoughnutCharComponent = () => {
     const labels = ['first','second','third','fourth','fifth','sixth','seventh']
     var options = {
         options: {
-            responsive: false,
-            aspectRatio: 2,
+            responsive: true,
+            maintainAspectRatio: true,
+
         tooltip: {
-                enabled: false
+                enabled: true
         }
         }
     }
@@ -55,8 +56,8 @@ const DoughnutCharComponent = () => {
         }]
     }
     return (
-        <div className={'doughnutChart'} style={{ backgroundColor:'white',borderRadius:'20px'}}>
-            <Doughnut aria-label={labels} data={data} options={options}/>
+        <div className={'doughnutChart'}>
+            <Doughnut aria-label={labels} data={data} options={options} style={{height: "200px", width: "200px"}}/>
         </div>
     )
 }
