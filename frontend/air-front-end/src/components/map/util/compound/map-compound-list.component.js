@@ -5,7 +5,7 @@ import MapCompound from "./map-compound.component";
 function MapCompoundList({compounds}) {
 
     return (
-        <div className="compounds-list w-100 h-100 d-flex justify-content-around gap-5 align-items-center flex-wrap">
+        <div className="compounds-list d-flex gap-5 flex-wrap justify-content-center">
             {/* eslint-disable-next-line react/prop-types */}
             {compounds.map(comp => (
                 <MapCompound key={comp.id} chemical={comp.chemical} value={comp.value}/>

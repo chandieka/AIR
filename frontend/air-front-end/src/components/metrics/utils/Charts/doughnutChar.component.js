@@ -9,7 +9,7 @@ import {
     Legend
 } from 'chart.js';
 import {Doughnut} from 'react-chartjs-2'
-import "./chartStyle.css"
+import "./chart.css"
 
 ChartJs.register(
     ArcElement,
@@ -56,7 +56,7 @@ const DoughnutCharComponent = () => {
         }]
     }
     return (
-        <div className={'doughnutChart'}>
+        <div className={'chart doughnutChart'}>
             <Doughnut aria-label={labels} data={data} options={options} style={{height: "200px", width: "200px"}}/>
         </div>
     )

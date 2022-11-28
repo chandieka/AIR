@@ -16,17 +16,27 @@ export default function MapPage() {
         },
         {
             id: 2,
-            chemical: '02',
+            chemical: 'NO',
             value: '33',
         },
         {
             id: 3,
-            chemical: '03',
+            chemical: 'SO2',
             value: '15',
         },
         {
             id: 4,
-            chemical: 'PM',
+            chemical: 'SO',
+            value: '10',
+        },
+        {
+            id: 5,
+            chemical: 'PM2.5',
+            value: '10',
+        },
+        {
+            id: 6,
+            chemical: 'PM10',
             value: '10',
         }
     ];
