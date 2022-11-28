@@ -6,3 +6,7 @@
 .compound-item p {
     margin: 0;
 }
+
+.compound-title {
+    position: absolute;
+}

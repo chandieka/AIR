@@ -3,7 +3,6 @@ import './side-navigation.component.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChartSimple } from '@fortawesome/free-solid-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
 import {Link} from "react-router-dom";
 
 function SideNavigation() {
@@ -17,11 +16,6 @@ function SideNavigation() {
             <Link to={"/metrics"}>
                 <div className={"btn-side-nav d-flex justify-content-center align-items-center jump"}>
                     <FontAwesomeIcon className="highlight" icon={faChartSimple} size="2x"/>
-                </div>
-            </Link>
-            <Link to={"/recommend"}>
-                <div className={"btn-side-nav d-flex justify-content-center align-items-center jump"}>
-                    <FontAwesomeIcon className="highlight" icon={faLightbulb} size="2x"/>
                 </div>
             </Link>
         </div>
