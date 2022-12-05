@@ -13,7 +13,7 @@ function MapFilterList() {
                 <div className="map-filter-spacer"></div>
             </div>
             <div className="filter-option d-flex justify-content-evenly align-items-center p-2">
-                <p>Something 1</p>
+                <p>Placeholder filter 1</p>
                 <Switch isOn={switchState1}
                         id={"switch1"}
                         handleToggle={() => setSwitchState1(!switchState1)}
@@ -21,7 +21,7 @@ function MapFilterList() {
                         style={{marginLeft: "auto"}}/>
             </div>
             <div className="filter-option d-flex justify-content-evenly align-items-center p-2">
-                <p>Something 2</p>
+                <p>Placeholder filter 2</p>
                 <Switch isOn={switchState2}
                         id={"switch2"}
                         handleToggle={() => setSwitchState2(!switchState2)}
@@ -29,7 +29,7 @@ function MapFilterList() {
                         style={{marginLeft: "auto"}}/>
             </div>
             <div className="filter-option d-flex justify-content-evenly align-items-center p-2">
-                <p>Something 3</p>
+                <p>Placeholder filter 3</p>
                 <Switch isOn={switchState3}
                         id={"switch3"}
                         handleToggle={() => setSwitchState3(!switchState3)}

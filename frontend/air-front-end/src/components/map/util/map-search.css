@@ -9,3 +9,10 @@
     align-items: center;
     gap: 10px;
 }
+
+@media screen and (max-width: 800px) {
+    .map-search-container{
+        width: 100%;
+        padding: 4px;
+    }
+}

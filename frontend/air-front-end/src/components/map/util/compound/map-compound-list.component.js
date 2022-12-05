@@ -1,5 +1,6 @@
 import React from 'react';
 import MapCompound from "./map-compound.component";
+import "../../../../pages/map.page.css"
 
 // eslint-disable-next-line react/prop-types
 function MapCompoundList({compounds}) {

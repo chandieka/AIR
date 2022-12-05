@@ -23,3 +23,18 @@
     background-color: white;
     color: #9116F9;
 }
+
+@media screen and (max-width: 800px) {
+    .control-container {
+        height: 40px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .control{
+        margin-left: 0;
+        width: 100%;
+    }
+}

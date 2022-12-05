@@ -6,3 +6,8 @@
     min-height: 30px;
     color: white;
 }
+
+a.active .highlight{
+    transition: 0.2s;
+    color: #9116F9;
+}

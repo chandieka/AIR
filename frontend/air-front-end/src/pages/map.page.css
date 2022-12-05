@@ -33,4 +33,43 @@
     grid-area: compoundsList;
 }
 
+@media screen and (max-width: 1600px) {
+    .compounds-list {
+        display: flex;
+    }
+
+    .map-layout {
+        grid-template-rows: 10vh 80vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .compounds-list {
+        display: none !important;
+    }
+
+    .map-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time-slider{
+        height: 10% !important;
+    }
+
+    .time-btns{
+        height: 10% !important;
+    }
+
+    .map{
+        min-height: 80% !important;
+        flex-direction: column !important;
+    }
+
+    .map-controls{
+        flex-direction: column;
+    }
+}
+
 
