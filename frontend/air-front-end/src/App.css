@@ -9,10 +9,10 @@ App {
 
 .side-nav{
     position: sticky;
-    min-width: 4%;
     min-height: 100%;
     z-index: 99;
     background-color: #3C2955;
+    padding: 0 10px;
 }
 
 .main {
