@@ -3,15 +3,16 @@
     color: white;
     height: 100%;
     border-radius: 8px;
-    min-width: 200px
+    margin-left: auto;
 }
 
 .control {
     background-color: #3C2955;
     height: 40px;
     width: 40px;
-    margin-left: 8px;
-    border-radius: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,4 +23,19 @@
 .control:hover {
     background-color: white;
     color: #9116F9;
+}
+
+@media screen and (max-width: 800px) {
+    .control-container {
+        height: 40px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .control{
+        margin-left: 0;
+        width: 100%;
+    }
 }

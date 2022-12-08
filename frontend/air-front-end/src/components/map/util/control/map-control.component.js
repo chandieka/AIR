@@ -15,6 +15,12 @@ function MapControl({ coordinate, zoom, map }){
             <div className='control d-flex justify-content-center align-items-center' onClick={clickEvent}>
                 <FontAwesomeIcon icon={faRotateRight} size="lg"/>
             </div>
+            <div className='control d-flex justify-content-center align-items-center' onClick={clickEvent}>
+                <FontAwesomeIcon icon={faRotateRight} size="lg" />
+            </div>
+            <div className='control d-flex justify-content-center align-items-center' onClick={clickEvent}>
+                <FontAwesomeIcon icon={faRotateRight} size="lg" />
+            </div>
         </div>
     );  
 }

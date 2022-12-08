@@ -1,8 +1,30 @@
+.compounds-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+
 .compound-item{
-    min-height: 130px;
-    width: 250px;
+    position: relative;
+    height: 100%;
 }
 
 .compound-item p {
     margin: 0;
+}
+
+.compound-value{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .compound-value {
+        font-size: 25px;
+    }
 }

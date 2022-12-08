@@ -1,0 +1,123 @@
+.area-layout{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:
+            "top top"
+            "info chart"
+;
+    padding: 8px;
+    gap: 8px;
+}
+
+.area-top-content{
+    grid-area: top;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.zipcode{
+    position: relative;
+    bottom: 22px;
+    left: 0;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding: 4px;
+    margin-bottom: -30px;
+}
+
+.top-content-controls{
+    text-align: center;
+}
+
+.top-content-extra-controls{
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.area-info-content{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.area-info-top{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 20%;
+    gap: 8px;
+}
+
+.area-info-top img{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.area-info-bottom{
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.area-chart-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    grid-area: chart;
+}
+
+.chart-area{
+ height: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    .area-layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .area-top-content{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .area-info-content{
+        height: 500px;
+    }
+
+    .area-chart-content{
+        height: 300px;
+        width: 100%;
+    }
+
+    .zipcode{
+        bottom: 24px;
+    }
+
+    .chart-area{
+        width: 100%;
+    }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
 import './App.css';
-import RecommendationPage from "./pages/recommendation.page";
 import MapPage from "./pages/map.page";
 import MetricsPage from "./pages/metrics.page";
 import TopNavigation from "./components/navigation/top-navigation.component";
 import SideNavigation from "./components/navigation/side-navigation.component";
+import AreaPage from "./pages/area.page";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
                       <Route path="/" element={<MapPage/>}/>
                       <Route path="/map" element={<MapPage/>} />
                       <Route path="/metrics" element={<MetricsPage/>} />
-                      <Route path="/recommend" element={<RecommendationPage/>} />
+                      <Route path="/area" element={<AreaPage/>} />
                   </Routes>
               </div>
           </div>
