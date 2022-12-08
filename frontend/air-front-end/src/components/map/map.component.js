@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import MapSearch from "./util/map-search.component";
 import MapControl from "./util/control/map-control.component";
 import Details from './control/details.component'
-import Boundaries from './data-layers/boundaries.component'
+import {Boundaries} from './data-layers/boundaries.component'
 import { MapContainer, TileLayer, ScaleControl } from 'react-leaflet';
 import L from 'leaflet';
+import MapLegend from "./util/legend/map-legend.component";
 
 
 function Map({ config }) {
@@ -37,8 +38,8 @@ function Map({ config }) {
                 <ScaleControl/>
                 <Details info={info} value={value}/> 
             </MapContainer>
-            <div className="d-flex justify-content-center align-items-center w-100 h-auto gap-1">
-                <div style={{background: "gray", width: "25%", height: "100%"}}/>
+            <div className="map-controls d-flex justify-content-center align-items-center w-100 h-auto gap-1">
+                <MapLegend/>
                 <MapControl 
                     coordinate={config.coordinate} 
                     zoom={config.zoom} 

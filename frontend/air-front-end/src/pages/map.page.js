@@ -5,6 +5,7 @@ import Map from "../components/map/map.component";
 import MapFilterList from "../components/map/util/filter/map-filter-list.component";
 import MapCompoundList from "../components/map/util/compound/map-compound-list.component";
 import "./map.page.css";
+import TimeDropdown from "../components/map/util/time/time-dropdown.component";
 
 export default function MapPage() {
     const staticDataCompound = [
@@ -52,6 +53,7 @@ export default function MapPage() {
             <Map config={config}/>
             <MapFilterList/>
             <MapCompoundList compounds={staticDataCompound}/>
+            <TimeDropdown/>
         </div>
     );
 }

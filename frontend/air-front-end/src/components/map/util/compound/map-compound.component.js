@@ -5,8 +5,8 @@ import "./compound.css";
 function MapCompound({chemical, value}) {
     return (
         <div className="compound-item custom-container">
-            <p>{chemical}</p>
-            <p style={{fontSize: 60, textAlign: "center", fontWeight: "bold"}}>{value}</p>
+            <p className={"compound-title"}>{chemical}</p>
+            <p className={"compound-value"} style={{textAlign: "center", fontWeight: "bold"}}>{value}</p>
         </div>
     );
 }

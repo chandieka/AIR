@@ -5,6 +5,6 @@ import MetricComponent from "../components/metrics/metric.component";
 
 export default function MetricsPage() {
     return (
-        <MetricComponent></MetricComponent>
+        <MetricComponent/>
     );
 }

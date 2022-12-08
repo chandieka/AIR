@@ -10,3 +10,12 @@
     background-color: rgb(38, 70, 83);;
     border-radius: 8px;
 }
+
+@media screen and (max-width: 800px) {
+    .metric-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { GeoJSON, useMap } from "react-leaflet";
 import PropTypes from 'prop-types';
 import boundaries from '../../../resources/data/eindhoven-area-boundaries.json';
+import {useNavigate} from "react-router";
 
 function getColor(aqi) {
     return aqi > 1000 ? '#800026' :
@@ -24,6 +25,7 @@ function areaStyle() {
 }
 
 function Boundaries({infoUpdate}) {
+    const navigate = useNavigate();
     const map = useMap()
     const geoJsonRef = useRef()
 
@@ -45,6 +47,9 @@ function Boundaries({infoUpdate}) {
             },
             click: () => {
                 map.fitBounds(layer.getBounds());
+            },
+            dblclick: () => {
+                navigate('/area', {replace: true, state:{pc4_code: feature.properties.pc4_code, }})
             }
         });
     }
@@ -64,5 +69,7 @@ Boundaries.propTypes = {
     infoUpdate: PropTypes.object
 };
 
-
-export default Boundaries;
+export {
+    Boundaries,
+    getColor
+}

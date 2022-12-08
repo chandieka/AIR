@@ -3,7 +3,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 0.2fr;
-    grid-template-rows: 10vh 1fr minmax(15vh, auto);
+    grid-template-rows: 10vh 1fr minmax(10vh, auto);
     grid-template-areas:
             "timeSlider timeBtns"
             "map mapFilters"
@@ -31,6 +31,35 @@
 
 .compounds-list{
     grid-area: compoundsList;
+}
+
+@media screen and (max-width: 800px) {
+
+    .compounds-list {
+        display: none !important;
+    }
+
+    .map-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time-slider{
+        height: 10% !important;
+    }
+
+    .time-btns{
+        height: 10% !important;
+    }
+
+    .map{
+        min-height: 80% !important;
+        flex-direction: column !important;
+    }
+
+    .map-controls{
+        flex-direction: column;
+    }
 }
 
 

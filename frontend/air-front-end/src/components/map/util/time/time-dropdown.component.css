@@ -1,0 +1,146 @@
+p {
+    margin: 0;
+}
+
+.time-dropdown-wrapper{
+    background-color: #3C2955;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 250px;
+    height: 35px;
+    top: 4px;
+    right: 10px;
+    z-index: 100;
+    border-radius: 0.25rem;
+}
+
+.time-element {
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 2px;
+}
+
+.btn-time{
+    height: 100%;
+    width: 20%;
+    background-color: #3C2955;
+    color: #ffffff;
+}
+
+.selected-time{
+    width: 60%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+
+.time-refresh-interval{
+    width: 20%;
+    color: #ffffff;
+}
+
+.time-refresh-interval p {
+    font-size: 10px;
+}
+
+#popover-basic-1{
+    max-width: 500px;
+}
+
+.custom-time-btn{
+    margin-left: auto;
+    height: 30.6px;
+}
+
+.input-select{
+    max-width: 100px;
+}
+
+.input-nr{
+    max-width: 40px;
+}
+
+.select-options-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 394px;
+}
+
+.select-subtitle{
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.select-quick{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid gray;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.select-quick-options{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 4px;
+}
+
+.select-common{
+    border-bottom: 1px solid gray;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.select-common-options{
+    display: grid;
+    justify-items: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+}
+
+.select-common-options > *{
+    color: #9116F9;
+    cursor: pointer;
+}
+
+.select-refresh-interval{
+    padding-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+@media screen and (max-width: 800px) {
+    #popover-basic-1{
+        max-width: 98vw;
+    }
+
+    .input-select{
+        max-width: 100px;
+    }
+
+    .input-nr{
+        max-width: 40px;
+    }
+
+    .select-options-wrapper{
+        min-width: 86vw;
+    }
+
+    .custom-time-btn{
+        width: 80px;
+    }
+}
