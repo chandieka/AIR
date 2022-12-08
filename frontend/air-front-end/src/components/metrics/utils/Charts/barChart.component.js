@@ -81,17 +81,17 @@ class BarChartComponent extends React.Component{
     // }
 
 
-    componentDidMount() {
+    // componentDidMount() {
 
-            axios.get('http://localhost:8000/airQuality/date/')
-                .then((response) => {
-                 jsonRetrievedInfo = response.data
-                 console.log("Json",jsonRetrievedInfo['date']);
+    //         axios.get('http://localhost:8000/airQuality/date/')
+    //             .then((response) => {
+    //              jsonRetrievedInfo = response.data
+    //              console.log("Json",jsonRetrievedInfo['date']);
 
-            }).catch(err=> {
-                console.log(err);
-            });
-        }
+    //         }).catch(err=> {
+    //             console.log(err);
+    //         });
+    //     }
 
 
     render(){
